@@ -103,3 +103,7 @@ C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.CustomerMenu.resources
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\App.config
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\bin\Debug\net8.0-windows\movieRental.dll.config
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AccountCreation.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.CustomerMenu.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\Resources\Outfit-VariableFont_wght.ttf
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\bin\Debug\net8.0-windows\Resources\Newake-Font-Demo.otf
