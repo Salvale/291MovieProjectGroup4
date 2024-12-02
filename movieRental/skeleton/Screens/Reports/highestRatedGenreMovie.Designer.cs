@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class customerScreen
+    partial class highestRatedGenreMovie
     {
         /// <summary> 
         /// Required designer variable.
@@ -52,10 +52,18 @@
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
-            EmpDataView = new DataGridView();
+            tableLayoutPanel8 = new TableLayoutPanel();
+            foreignLabel = new Label();
+            topForeignDataView = new DataGridView();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            dramaLabel = new Label();
+            topDramaDataView = new DataGridView();
             tableLayoutPanel6 = new TableLayoutPanel();
-            addCustomerButton = new Button();
-            customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
+            comedyLabel = new Label();
+            topComdeyDataView = new DataGridView();
+            tableLayoutPanel5 = new TableLayoutPanel();
+            actionLabel = new Label();
+            topActionDataView = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -74,8 +82,14 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).BeginInit();
+            tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)topForeignDataView).BeginInit();
+            tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)topDramaDataView).BeginInit();
             tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)topComdeyDataView).BeginInit();
+            tableLayoutPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)topActionDataView).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -185,7 +199,7 @@
             // ReportsContainer
             // 
             ReportsContainer.Anchor = AnchorStyles.None;
-            ReportsContainer.BackColor = Color.Transparent;
+            ReportsContainer.BackColor = Color.FromArgb(84, 80, 164);
             ReportsContainer.BorderColor = Color.Transparent;
             ReportsContainer.BorderRadius = 10;
             ReportsContainer.BorderSize = 0;
@@ -229,7 +243,7 @@
             // CustomersContainer
             // 
             CustomersContainer.Anchor = AnchorStyles.None;
-            CustomersContainer.BackColor = Color.FromArgb(84, 80, 164);
+            CustomersContainer.BackColor = Color.Transparent;
             CustomersContainer.BackgroundImageLayout = ImageLayout.None;
             CustomersContainer.BorderColor = Color.Transparent;
             CustomersContainer.BorderRadius = 10;
@@ -408,13 +422,13 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Customer";
+            EmpTabName.Text = "Highest Rated Movie Per Genre";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.customers;
+            SectionIcon.Image = Properties.Resources.report;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -447,86 +461,188 @@
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel4.ColumnCount = 1;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(EmpDataView, 0, 1);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 0);
+            tableLayoutPanel4.ColumnCount = 4;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel8, 3, 0);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel7, 2, 0);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 1, 0);
+            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 0);
             tableLayoutPanel4.Location = new Point(19, 19);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel4.RowCount = 1;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.Size = new Size(1133, 650);
             tableLayoutPanel4.TabIndex = 0;
             // 
-            // EmpDataView
+            // tableLayoutPanel8
             // 
-            EmpDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EmpDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            EmpDataView.BorderStyle = BorderStyle.None;
-            EmpDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            EmpDataView.Location = new Point(0, 68);
-            EmpDataView.Margin = new Padding(0, 8, 0, 0);
-            EmpDataView.Name = "EmpDataView";
-            EmpDataView.RowHeadersWidth = 51;
-            EmpDataView.Size = new Size(1133, 582);
-            EmpDataView.TabIndex = 4;
+            tableLayoutPanel8.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel8.ColumnCount = 1;
+            tableLayoutPanel8.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel8.Controls.Add(foreignLabel, 0, 0);
+            tableLayoutPanel8.Controls.Add(topForeignDataView, 0, 2);
+            tableLayoutPanel8.Location = new Point(852, 3);
+            tableLayoutPanel8.Name = "tableLayoutPanel8";
+            tableLayoutPanel8.RowCount = 3;
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
+            tableLayoutPanel8.Size = new Size(278, 644);
+            tableLayoutPanel8.TabIndex = 4;
+            // 
+            // foreignLabel
+            // 
+            foreignLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            foreignLabel.AutoSize = true;
+            foreignLabel.Font = new Font("Segoe UI", 13.915966F);
+            foreignLabel.ForeColor = Color.White;
+            foreignLabel.Location = new Point(3, 15);
+            foreignLabel.Name = "foreignLabel";
+            foreignLabel.Size = new Size(272, 31);
+            foreignLabel.TabIndex = 23;
+            foreignLabel.Text = "Top Foreign:";
+            // 
+            // topForeignDataView
+            // 
+            topForeignDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            topForeignDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            topForeignDataView.BorderStyle = BorderStyle.None;
+            topForeignDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            topForeignDataView.Location = new Point(0, 90);
+            topForeignDataView.Margin = new Padding(0, 8, 0, 0);
+            topForeignDataView.Name = "topForeignDataView";
+            topForeignDataView.RowHeadersWidth = 51;
+            topForeignDataView.Size = new Size(278, 554);
+            topForeignDataView.TabIndex = 24;
+            // 
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel7.ColumnCount = 1;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Controls.Add(dramaLabel, 0, 0);
+            tableLayoutPanel7.Controls.Add(topDramaDataView, 0, 2);
+            tableLayoutPanel7.Location = new Point(569, 3);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 3;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
+            tableLayoutPanel7.Size = new Size(277, 644);
+            tableLayoutPanel7.TabIndex = 3;
+            // 
+            // dramaLabel
+            // 
+            dramaLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            dramaLabel.AutoSize = true;
+            dramaLabel.Font = new Font("Segoe UI", 13.915966F);
+            dramaLabel.ForeColor = Color.White;
+            dramaLabel.Location = new Point(3, 15);
+            dramaLabel.Name = "dramaLabel";
+            dramaLabel.Size = new Size(271, 31);
+            dramaLabel.TabIndex = 23;
+            dramaLabel.Text = "Top Drama:";
+            // 
+            // topDramaDataView
+            // 
+            topDramaDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            topDramaDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            topDramaDataView.BorderStyle = BorderStyle.None;
+            topDramaDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            topDramaDataView.Location = new Point(0, 90);
+            topDramaDataView.Margin = new Padding(0, 8, 0, 0);
+            topDramaDataView.Name = "topDramaDataView";
+            topDramaDataView.RowHeadersWidth = 51;
+            topDramaDataView.Size = new Size(277, 554);
+            topDramaDataView.TabIndex = 24;
             // 
             // tableLayoutPanel6
             // 
             tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel6.ColumnCount = 3;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
-            tableLayoutPanel6.Controls.Add(addCustomerButton, 0, 0);
-            tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
-            tableLayoutPanel6.Location = new Point(0, 0);
-            tableLayoutPanel6.Margin = new Padding(0);
+            tableLayoutPanel6.ColumnCount = 1;
+            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel6.Controls.Add(comedyLabel, 0, 0);
+            tableLayoutPanel6.Controls.Add(topComdeyDataView, 0, 2);
+            tableLayoutPanel6.Location = new Point(286, 3);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 1;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new Size(1133, 60);
-            tableLayoutPanel6.TabIndex = 5;
+            tableLayoutPanel6.RowCount = 3;
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
+            tableLayoutPanel6.Size = new Size(277, 644);
+            tableLayoutPanel6.TabIndex = 2;
             // 
-            // addCustomerButton
+            // comedyLabel
             // 
-            addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addCustomerButton.BackColor = Color.FromArgb(84, 80, 164);
-            addCustomerButton.FlatAppearance.BorderSize = 0;
-            addCustomerButton.FlatStyle = FlatStyle.Flat;
-            addCustomerButton.ForeColor = Color.White;
-            addCustomerButton.Location = new Point(3, 5);
-            addCustomerButton.Name = "addCustomerButton";
-            addCustomerButton.Size = new Size(261, 50);
-            addCustomerButton.TabIndex = 20;
-            addCustomerButton.Text = "Add Customer";
-            addCustomerButton.UseVisualStyleBackColor = false;
-            addCustomerButton.Click += addCustomer_Click;
+            comedyLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            comedyLabel.AutoSize = true;
+            comedyLabel.Font = new Font("Segoe UI", 13.915966F);
+            comedyLabel.ForeColor = Color.White;
+            comedyLabel.Location = new Point(3, 15);
+            comedyLabel.Name = "comedyLabel";
+            comedyLabel.Size = new Size(271, 31);
+            comedyLabel.TabIndex = 23;
+            comedyLabel.Text = "Top Comedy:";
             // 
-            // customerSearch
+            // topComdeyDataView
             // 
-            customerSearch.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            customerSearch.BackColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderColor = Color.FromArgb(25, 26, 63);
-            customerSearch.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            customerSearch.BorderRadius = 26;
-            customerSearch.BorderSize = 2;
-            customerSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            customerSearch.ForeColor = Color.White;
-            customerSearch.Location = new Point(730, 4);
-            customerSearch.Margin = new Padding(0);
-            customerSearch.Multiline = false;
-            customerSearch.Name = "customerSearch";
-            customerSearch.Padding = new Padding(20, 15, 20, 15);
-            customerSearch.PasswordChar = false;
-            customerSearch.PlaceholderColor = Color.DarkGray;
-            customerSearch.PlaceholderText = "Search for a customer";
-            customerSearch.Size = new Size(403, 51);
-            customerSearch.TabIndex = 0;
-            customerSearch.UnderlinedStyle = false;
+            topComdeyDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            topComdeyDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            topComdeyDataView.BorderStyle = BorderStyle.None;
+            topComdeyDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            topComdeyDataView.Location = new Point(0, 90);
+            topComdeyDataView.Margin = new Padding(0, 8, 0, 0);
+            topComdeyDataView.Name = "topComdeyDataView";
+            topComdeyDataView.RowHeadersWidth = 51;
+            topComdeyDataView.Size = new Size(277, 554);
+            topComdeyDataView.TabIndex = 24;
             // 
-            // customerScreen
+            // tableLayoutPanel5
+            // 
+            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Controls.Add(actionLabel, 0, 0);
+            tableLayoutPanel5.Controls.Add(topActionDataView, 0, 2);
+            tableLayoutPanel5.Location = new Point(3, 3);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 3;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
+            tableLayoutPanel5.Size = new Size(277, 644);
+            tableLayoutPanel5.TabIndex = 1;
+            // 
+            // actionLabel
+            // 
+            actionLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            actionLabel.AutoSize = true;
+            actionLabel.Font = new Font("Segoe UI", 13.915966F);
+            actionLabel.ForeColor = Color.White;
+            actionLabel.Location = new Point(3, 15);
+            actionLabel.Name = "actionLabel";
+            actionLabel.Size = new Size(271, 31);
+            actionLabel.TabIndex = 23;
+            actionLabel.Text = "Top Action:";
+            // 
+            // topActionDataView
+            // 
+            topActionDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            topActionDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            topActionDataView.BorderStyle = BorderStyle.None;
+            topActionDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            topActionDataView.Location = new Point(0, 90);
+            topActionDataView.Margin = new Padding(0, 8, 0, 0);
+            topActionDataView.Name = "topActionDataView";
+            topActionDataView.RowHeadersWidth = 51;
+            topActionDataView.Size = new Size(277, 554);
+            topActionDataView.TabIndex = 24;
+            // 
+            // highestRatedGenreMovie
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -534,9 +650,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "customerScreen";
+            Name = "highestRatedGenreMovie";
             Size = new Size(1301, 805);
-            Load += customerScreen_Load;
+            Load += highestRatedGenreMovie_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -558,8 +674,18 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).EndInit();
+            tableLayoutPanel8.ResumeLayout(false);
+            tableLayoutPanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)topForeignDataView).EndInit();
+            tableLayoutPanel7.ResumeLayout(false);
+            tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)topDramaDataView).EndInit();
             tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)topComdeyDataView).EndInit();
+            tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)topActionDataView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -590,16 +716,22 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
-        private DataGridView EmpDataView;
-
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
 
         private TableLayoutPanel tableLayoutPanel4;
+        private TableLayoutPanel tableLayoutPanel5;
+        private Label actionLabel;
+        private TableLayoutPanel tableLayoutPanel8;
+        private Label foreignLabel;
+        private DataGridView topForeignDataView;
+        private TableLayoutPanel tableLayoutPanel7;
+        private Label dramaLabel;
+        private DataGridView topDramaDataView;
         private TableLayoutPanel tableLayoutPanel6;
-
-        private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
-        private Button addCustomerButton;
+        private Label comedyLabel;
+        private DataGridView topComdeyDataView;
+        private DataGridView topActionDataView;
     }
 }

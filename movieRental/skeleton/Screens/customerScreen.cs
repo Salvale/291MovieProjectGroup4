@@ -22,13 +22,6 @@ namespace movieRental
         //Data
         public List<Customer> Customers;
 
-        // Custom Fonts
-        private Font outfitFontS30Bold;
-        private Font outfitFontS10Bold;
-        private Font outfitFontS8Bold;
-
-        private Font outfitFontS12;
-
         public customerScreen()
         {
             InitializeComponent();
@@ -40,37 +33,6 @@ namespace movieRental
             addAttributeColoumns();
             AddEditButtonColumn();
             EmpDataView.CellContentClick += EmpDataView_CellContentClick;
-           
-            //LoadCustomFont();
-            //ApplyFonts();
-        }
-
-        //Custom Fonts
-        private void LoadCustomFont()
-        {
-            PrivateFontCollection pfcOutfit = new PrivateFontCollection();
-            string outfitFontPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Outfit-VariableFont_wght.ttf");
-            pfcOutfit.AddFontFile(outfitFontPath);
-
-            outfitFontS30Bold = new Font(pfcOutfit.Families[0], 30f, FontStyle.Bold);
-            outfitFontS10Bold = new Font(pfcOutfit.Families[0], 10f, FontStyle.Bold);
-            outfitFontS8Bold = new Font(pfcOutfit.Families[0], 8f, FontStyle.Bold);
-
-            outfitFontS12 = new Font(pfcOutfit.Families[0], 12f, FontStyle.Regular);
-        }
-
-        private void ApplyFonts()
-        {
-            EmpTabName.Font = outfitFontS30Bold;
-
-            CustomerLabel.Font = outfitFontS8Bold;
-            MovieLabel.Font = outfitFontS8Bold;
-            RentalLabel.Font = outfitFontS8Bold;
-            ReportLabel.Font = outfitFontS8Bold;
-            LogoutLabel.Font = outfitFontS8Bold;
-
-            customerSearch.Font = outfitFontS12;
-            addCustomerButton.Font = outfitFontS10Bold;
         }
 
         // Data Source
@@ -192,23 +154,9 @@ namespace movieRental
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void empLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void customerScreen_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void LogOutButton_Click(object sender, EventArgs e)
-        {
         }
 
         private void CustomersButton_Click(object sender, EventArgs e)
@@ -230,31 +178,11 @@ namespace movieRental
         {
             SwitchToScreen(new reportScreen());
         }
-
-        private void tableLayoutPanel14_Paint(object sender, PaintEventArgs e)
+        private void LogOutButton_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void roundedPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void EmpTabName_Click(object sender, EventArgs e)
-        {
-
-        }
+        // Body Buttons
 
         private void addCustomer_Click(object sender, EventArgs e)
         {

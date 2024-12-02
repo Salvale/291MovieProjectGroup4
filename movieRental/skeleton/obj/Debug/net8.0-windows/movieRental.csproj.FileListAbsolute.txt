@@ -90,7 +90,6 @@ F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-win
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.Properties.Resources.resources
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.AccountCreation.resources
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.actorScreen.resources
-F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addActor.resources
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addCustomer.resources
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.addMovie.resources
 F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.customerQueue.resources
@@ -127,3 +126,8 @@ C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.moviesScreen.resources
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.rentalScreen.resources
 C:\Users\moses\Desktop\291MovieProjectGroup4\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.reportScreen.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.biggestFan.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.highestRatedGenreMovie.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.recommendedMovie.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.grossingMovies.resources
+F:\Development\Coding\.School\CMPT 291\movieRental\skeleton\obj\Debug\net8.0-windows\movieRental.prolificEmployee.resources

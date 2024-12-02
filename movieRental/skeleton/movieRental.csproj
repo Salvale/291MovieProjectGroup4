@@ -26,9 +26,6 @@
     <Compile Update="Screens\actorScreen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Screens\addActor.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="Screens\editMovie.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -57,6 +54,21 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Screens\Reports\prolificEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\Reports\grossingMovies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\Reports\recommendedMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\Reports\highestRatedGenreMovie.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Screens\Reports\biggestFan.cs">
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
 

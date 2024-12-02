@@ -53,14 +53,11 @@
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
             tableLayoutPanel5 = new TableLayoutPanel();
-            report5Button = new Button();
-            report4Button = new Button();
-            report3Button = new Button();
-            report2Button = new Button();
-            report1Button = new Button();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            reportDataView = new DataGridView();
-            reportNameLabel = new Label();
+            highestMovieGenreButton = new Button();
+            biggestFanButton = new Button();
+            prolificEmployeeButton = new Button();
+            grossingMovieButton = new Button();
+            recommendMovieButton = new Button();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -80,8 +77,6 @@
             roundedPanel2.SuspendLayout();
             tableLayoutPanel4.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
-            tableLayoutPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)reportDataView).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -452,31 +447,28 @@
             // tableLayoutPanel4
             // 
             tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel4.ColumnCount = 2;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30F));
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70F));
+            tableLayoutPanel4.ColumnCount = 1;
+            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 0);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 1, 0);
             tableLayoutPanel4.Location = new Point(19, 19);
             tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 1;
+            tableLayoutPanel4.RowCount = 2;
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel4.Size = new Size(1133, 650);
             tableLayoutPanel4.TabIndex = 0;
-            tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
             // tableLayoutPanel5
             // 
-            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel5.AutoSize = true;
+            tableLayoutPanel5.Anchor = AnchorStyles.None;
             tableLayoutPanel5.ColumnCount = 1;
             tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Controls.Add(report5Button, 0, 4);
-            tableLayoutPanel5.Controls.Add(report4Button, 0, 3);
-            tableLayoutPanel5.Controls.Add(report3Button, 0, 2);
-            tableLayoutPanel5.Controls.Add(report2Button, 0, 1);
-            tableLayoutPanel5.Controls.Add(report1Button, 0, 0);
-            tableLayoutPanel5.Location = new Point(0, 0);
+            tableLayoutPanel5.Controls.Add(highestMovieGenreButton, 0, 4);
+            tableLayoutPanel5.Controls.Add(biggestFanButton, 0, 3);
+            tableLayoutPanel5.Controls.Add(prolificEmployeeButton, 0, 2);
+            tableLayoutPanel5.Controls.Add(grossingMovieButton, 0, 1);
+            tableLayoutPanel5.Controls.Add(recommendMovieButton, 0, 0);
+            tableLayoutPanel5.Location = new Point(258, 115);
             tableLayoutPanel5.Margin = new Padding(0, 0, 16, 0);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 5;
@@ -485,124 +477,88 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 80F));
-            tableLayoutPanel5.Size = new Size(323, 400);
+            tableLayoutPanel5.Size = new Size(600, 400);
             tableLayoutPanel5.TabIndex = 0;
             // 
-            // report5Button
+            // highestMovieGenreButton
             // 
-            report5Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            report5Button.BackColor = Color.FromArgb(84, 80, 164);
-            report5Button.FlatAppearance.BorderSize = 0;
-            report5Button.FlatStyle = FlatStyle.Flat;
-            report5Button.ForeColor = Color.White;
-            report5Button.Location = new Point(0, 335);
-            report5Button.Margin = new Padding(0);
-            report5Button.Name = "report5Button";
-            report5Button.Size = new Size(323, 50);
-            report5Button.TabIndex = 26;
-            report5Button.Text = "Report 5";
-            report5Button.UseVisualStyleBackColor = false;
+            highestMovieGenreButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            highestMovieGenreButton.BackColor = Color.FromArgb(84, 80, 164);
+            highestMovieGenreButton.FlatAppearance.BorderSize = 0;
+            highestMovieGenreButton.FlatStyle = FlatStyle.Flat;
+            highestMovieGenreButton.ForeColor = Color.White;
+            highestMovieGenreButton.Location = new Point(0, 335);
+            highestMovieGenreButton.Margin = new Padding(0);
+            highestMovieGenreButton.Name = "highestMovieGenreButton";
+            highestMovieGenreButton.Size = new Size(600, 50);
+            highestMovieGenreButton.TabIndex = 26;
+            highestMovieGenreButton.Text = "Highest Rated Movie Per Genre";
+            highestMovieGenreButton.UseVisualStyleBackColor = false;
+            highestMovieGenreButton.Click += highestMovieGenreButton_Click;
             // 
-            // report4Button
+            // biggestFanButton
             // 
-            report4Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            report4Button.BackColor = Color.FromArgb(84, 80, 164);
-            report4Button.FlatAppearance.BorderSize = 0;
-            report4Button.FlatStyle = FlatStyle.Flat;
-            report4Button.ForeColor = Color.White;
-            report4Button.Location = new Point(0, 255);
-            report4Button.Margin = new Padding(0);
-            report4Button.Name = "report4Button";
-            report4Button.Size = new Size(323, 50);
-            report4Button.TabIndex = 25;
-            report4Button.Text = "Report 4";
-            report4Button.UseVisualStyleBackColor = false;
+            biggestFanButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            biggestFanButton.BackColor = Color.FromArgb(84, 80, 164);
+            biggestFanButton.FlatAppearance.BorderSize = 0;
+            biggestFanButton.FlatStyle = FlatStyle.Flat;
+            biggestFanButton.ForeColor = Color.White;
+            biggestFanButton.Location = new Point(0, 255);
+            biggestFanButton.Margin = new Padding(0);
+            biggestFanButton.Name = "biggestFanButton";
+            biggestFanButton.Size = new Size(600, 50);
+            biggestFanButton.TabIndex = 25;
+            biggestFanButton.Text = "Actor's Biggest Fans";
+            biggestFanButton.UseVisualStyleBackColor = false;
+            biggestFanButton.Click += biggestFanButton_Click;
             // 
-            // report3Button
+            // prolificEmployeeButton
             // 
-            report3Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            report3Button.BackColor = Color.FromArgb(84, 80, 164);
-            report3Button.FlatAppearance.BorderSize = 0;
-            report3Button.FlatStyle = FlatStyle.Flat;
-            report3Button.ForeColor = Color.White;
-            report3Button.Location = new Point(0, 175);
-            report3Button.Margin = new Padding(0);
-            report3Button.Name = "report3Button";
-            report3Button.Size = new Size(323, 50);
-            report3Button.TabIndex = 24;
-            report3Button.Text = "Report 3";
-            report3Button.UseVisualStyleBackColor = false;
+            prolificEmployeeButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            prolificEmployeeButton.BackColor = Color.FromArgb(84, 80, 164);
+            prolificEmployeeButton.FlatAppearance.BorderSize = 0;
+            prolificEmployeeButton.FlatStyle = FlatStyle.Flat;
+            prolificEmployeeButton.ForeColor = Color.White;
+            prolificEmployeeButton.Location = new Point(0, 175);
+            prolificEmployeeButton.Margin = new Padding(0);
+            prolificEmployeeButton.Name = "prolificEmployeeButton";
+            prolificEmployeeButton.Size = new Size(600, 50);
+            prolificEmployeeButton.TabIndex = 24;
+            prolificEmployeeButton.Text = "Most Prolific Employee For Each Month";
+            prolificEmployeeButton.UseVisualStyleBackColor = false;
+            prolificEmployeeButton.Click += prolificEmployeeButton_Click;
             // 
-            // report2Button
+            // grossingMovieButton
             // 
-            report2Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            report2Button.BackColor = Color.FromArgb(84, 80, 164);
-            report2Button.FlatAppearance.BorderSize = 0;
-            report2Button.FlatStyle = FlatStyle.Flat;
-            report2Button.ForeColor = Color.White;
-            report2Button.Location = new Point(0, 95);
-            report2Button.Margin = new Padding(0);
-            report2Button.Name = "report2Button";
-            report2Button.Size = new Size(323, 50);
-            report2Button.TabIndex = 23;
-            report2Button.Text = "Report 2";
-            report2Button.UseVisualStyleBackColor = false;
+            grossingMovieButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            grossingMovieButton.BackColor = Color.FromArgb(84, 80, 164);
+            grossingMovieButton.FlatAppearance.BorderSize = 0;
+            grossingMovieButton.FlatStyle = FlatStyle.Flat;
+            grossingMovieButton.ForeColor = Color.White;
+            grossingMovieButton.Location = new Point(0, 95);
+            grossingMovieButton.Margin = new Padding(0);
+            grossingMovieButton.Name = "grossingMovieButton";
+            grossingMovieButton.Size = new Size(600, 50);
+            grossingMovieButton.TabIndex = 23;
+            grossingMovieButton.Text = "Most Grossing Movie For Each Month";
+            grossingMovieButton.UseVisualStyleBackColor = false;
+            grossingMovieButton.Click += grossingMovieButton_Click;
             // 
-            // report1Button
+            // recommendMovieButton
             // 
-            report1Button.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            report1Button.BackColor = Color.FromArgb(84, 80, 164);
-            report1Button.FlatAppearance.BorderSize = 0;
-            report1Button.FlatStyle = FlatStyle.Flat;
-            report1Button.ForeColor = Color.White;
-            report1Button.Location = new Point(0, 15);
-            report1Button.Margin = new Padding(0);
-            report1Button.Name = "report1Button";
-            report1Button.Size = new Size(323, 50);
-            report1Button.TabIndex = 22;
-            report1Button.Text = "Report 1";
-            report1Button.UseVisualStyleBackColor = false;
-            // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel6.ColumnCount = 1;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Controls.Add(reportDataView, 0, 1);
-            tableLayoutPanel6.Controls.Add(reportNameLabel, 0, 0);
-            tableLayoutPanel6.Location = new Point(339, 0);
-            tableLayoutPanel6.Margin = new Padding(0);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 2;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Size = new Size(794, 650);
-            tableLayoutPanel6.TabIndex = 1;
-            // 
-            // reportDataView
-            // 
-            reportDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            reportDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            reportDataView.BorderStyle = BorderStyle.None;
-            reportDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            reportDataView.Location = new Point(0, 76);
-            reportDataView.Margin = new Padding(0, 16, 0, 0);
-            reportDataView.Name = "reportDataView";
-            reportDataView.RowHeadersWidth = 51;
-            reportDataView.Size = new Size(794, 574);
-            reportDataView.TabIndex = 24;
-            // 
-            // reportNameLabel
-            // 
-            reportNameLabel.Anchor = AnchorStyles.Left;
-            reportNameLabel.AutoSize = true;
-            reportNameLabel.Font = new Font("Segoe UI", 13.915966F);
-            reportNameLabel.ForeColor = Color.White;
-            reportNameLabel.Location = new Point(3, 14);
-            reportNameLabel.Name = "reportNameLabel";
-            reportNameLabel.Size = new Size(77, 31);
-            reportNameLabel.TabIndex = 23;
-            reportNameLabel.Text = "report";
+            recommendMovieButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            recommendMovieButton.BackColor = Color.FromArgb(84, 80, 164);
+            recommendMovieButton.FlatAppearance.BorderSize = 0;
+            recommendMovieButton.FlatStyle = FlatStyle.Flat;
+            recommendMovieButton.ForeColor = Color.White;
+            recommendMovieButton.Location = new Point(0, 15);
+            recommendMovieButton.Margin = new Padding(0);
+            recommendMovieButton.Name = "recommendMovieButton";
+            recommendMovieButton.Size = new Size(600, 50);
+            recommendMovieButton.TabIndex = 22;
+            recommendMovieButton.Text = "Recommened Movie for Customer";
+            recommendMovieButton.UseVisualStyleBackColor = false;
+            recommendMovieButton.Click += recommendMovieButton_Click;
             // 
             // reportScreen
             // 
@@ -636,11 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
             tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel4.PerformLayout();
             tableLayoutPanel5.ResumeLayout(false);
-            tableLayoutPanel6.ResumeLayout(false);
-            tableLayoutPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)reportDataView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -677,13 +629,10 @@
 
         private TableLayoutPanel tableLayoutPanel4;
         private TableLayoutPanel tableLayoutPanel5;
-        private Button report5Button;
-        private Button report4Button;
-        private Button report3Button;
-        private Button report2Button;
-        private Button report1Button;
-        private TableLayoutPanel tableLayoutPanel6;
-        private Label reportNameLabel;
-        private DataGridView reportDataView;
+        private Button highestMovieGenreButton;
+        private Button biggestFanButton;
+        private Button prolificEmployeeButton;
+        private Button grossingMovieButton;
+        private Button recommendMovieButton;
     }
 }

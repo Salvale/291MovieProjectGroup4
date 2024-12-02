@@ -54,7 +54,6 @@
             tableLayoutPanel4 = new TableLayoutPanel();
             actorDataView = new DataGridView();
             tableLayoutPanel5 = new TableLayoutPanel();
-            addActorButton = new Button();
             actorSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -457,7 +456,6 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.Size = new Size(1133, 650);
             tableLayoutPanel4.TabIndex = 0;
-            tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
             // actorDataView
             // 
@@ -475,32 +473,17 @@
             // tableLayoutPanel5
             // 
             tableLayoutPanel5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel5.ColumnCount = 2;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 79.258606F));
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20.741394F));
-            tableLayoutPanel5.Controls.Add(addActorButton, 1, 0);
+            tableLayoutPanel5.ColumnCount = 1;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
             tableLayoutPanel5.Controls.Add(actorSearch, 0, 0);
             tableLayoutPanel5.Location = new Point(0, 0);
             tableLayoutPanel5.Margin = new Padding(0);
             tableLayoutPanel5.Name = "tableLayoutPanel5";
             tableLayoutPanel5.RowCount = 1;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.Size = new Size(1133, 60);
             tableLayoutPanel5.TabIndex = 5;
-            // 
-            // addActorButton
-            // 
-            addActorButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addActorButton.BackColor = Color.FromArgb(84, 80, 164);
-            addActorButton.FlatAppearance.BorderSize = 0;
-            addActorButton.FlatStyle = FlatStyle.Flat;
-            addActorButton.ForeColor = Color.White;
-            addActorButton.Location = new Point(901, 5);
-            addActorButton.Name = "addActorButton";
-            addActorButton.Size = new Size(229, 50);
-            addActorButton.TabIndex = 22;
-            addActorButton.Text = "Add Actor";
-            addActorButton.UseVisualStyleBackColor = false;
             // 
             // actorSearch
             // 
@@ -513,14 +496,14 @@
             actorSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             actorSearch.ForeColor = Color.White;
             actorSearch.Location = new Point(0, 4);
-            actorSearch.Margin = new Padding(0, 0, 64, 0);
+            actorSearch.Margin = new Padding(0);
             actorSearch.Multiline = false;
             actorSearch.Name = "actorSearch";
             actorSearch.Padding = new Padding(20, 15, 20, 15);
             actorSearch.PasswordChar = false;
             actorSearch.PlaceholderColor = Color.DarkGray;
             actorSearch.PlaceholderText = "Search for an actor";
-            actorSearch.Size = new Size(834, 51);
+            actorSearch.Size = new Size(1133, 51);
             actorSearch.TabIndex = 5;
             actorSearch.UnderlinedStyle = false;
             // 
@@ -534,7 +517,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "actorScreen";
             Size = new Size(1301, 805);
-            Load += addActor_Load;
+            Load += actorScreen_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -597,6 +580,5 @@
         private TableLayoutPanel tableLayoutPanel4;
         private CustomControls.RoundedTextBox.RoundedTextBox actorSearch;
         private TableLayoutPanel tableLayoutPanel5;
-        private Button addActorButton;
     }
 }

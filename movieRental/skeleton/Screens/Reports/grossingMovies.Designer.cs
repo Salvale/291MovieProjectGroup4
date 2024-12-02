@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class addActor
+    partial class grossingMovies
     {
         /// <summary> 
         /// Required designer variable.
@@ -51,17 +51,11 @@
             EmpTabName = new Label();
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            addActorButton = new Button();
-            tableLayoutPanel7 = new TableLayoutPanel();
-            nameLabel = new Label();
-            nameInput = new CustomControls.RoundedTextBox.RoundedTextBox();
             tableLayoutPanel5 = new TableLayoutPanel();
-            genderLabel = new Label();
-            genderInput = new CustomControls.RoundedTextBox.RoundedTextBox();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            dobLabel = new Label();
-            dobInput = new CustomControls.RoundedTextBox.RoundedTextBox();
+            topMovieDataView = new DataGridView();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            monthLabel = new Label();
+            monthComboBox = new ComboBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -79,10 +73,9 @@
             roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            tableLayoutPanel7.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
-            tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)topMovieDataView).BeginInit();
+            tableLayoutPanel7.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -192,7 +185,7 @@
             // ReportsContainer
             // 
             ReportsContainer.Anchor = AnchorStyles.None;
-            ReportsContainer.BackColor = Color.Transparent;
+            ReportsContainer.BackColor = Color.FromArgb(84, 80, 164);
             ReportsContainer.BorderColor = Color.Transparent;
             ReportsContainer.BorderRadius = 10;
             ReportsContainer.BorderSize = 0;
@@ -325,7 +318,7 @@
             // MoviesContainer
             // 
             MoviesContainer.Anchor = AnchorStyles.None;
-            MoviesContainer.BackColor = Color.FromArgb(84, 80, 164);
+            MoviesContainer.BackColor = Color.Transparent;
             MoviesContainer.BorderColor = Color.Transparent;
             MoviesContainer.BorderRadius = 10;
             MoviesContainer.BorderSize = 0;
@@ -353,6 +346,7 @@
             MovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
             MovieButton.TabIndex = 0;
             MovieButton.TabStop = false;
+            MovieButton.Click += MoviesButton_Click;
             // 
             // MovieLabel
             // 
@@ -414,14 +408,13 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Add Actor";
+            EmpTabName.Text = "Most Grossing Movie For Each Month";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
-            EmpTabName.Click += EmpTabName_Click;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.addCustomer;
+            SectionIcon.Image = Properties.Resources.report;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -440,7 +433,7 @@
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            roundedPanel2.Controls.Add(tableLayoutPanel4, 1, 1);
+            roundedPanel2.Controls.Add(tableLayoutPanel5, 1, 1);
             roundedPanel2.Location = new Point(0, 88);
             roundedPanel2.Margin = new Padding(0);
             roundedPanel2.Name = "roundedPanel2";
@@ -451,196 +444,80 @@
             roundedPanel2.Size = new Size(1171, 688);
             roundedPanel2.TabIndex = 8;
             // 
-            // tableLayoutPanel4
+            // tableLayoutPanel5
             // 
-            tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel4.ColumnCount = 1;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 2);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel5, 0, 1);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel7, 0, 0);
-            tableLayoutPanel4.Controls.Add(addActorButton, 0, 4);
-            tableLayoutPanel4.Location = new Point(16, 16);
-            tableLayoutPanel4.Margin = new Padding(0);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 5;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle());
-            tableLayoutPanel4.RowStyles.Add(new RowStyle());
-            tableLayoutPanel4.RowStyles.Add(new RowStyle());
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel4.Size = new Size(1139, 656);
-            tableLayoutPanel4.TabIndex = 0;
-            tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
+            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel5.ColumnCount = 3;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(topMovieDataView, 0, 2);
+            tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 0, 0);
+            tableLayoutPanel5.Location = new Point(19, 19);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 3;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Size = new Size(1133, 650);
+            tableLayoutPanel5.TabIndex = 7;
             // 
-            // addActorButton
+            // topMovieDataView
             // 
-            addActorButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addActorButton.BackColor = Color.FromArgb(84, 80, 164);
-            addActorButton.FlatAppearance.BorderSize = 0;
-            addActorButton.FlatStyle = FlatStyle.Flat;
-            addActorButton.ForeColor = Color.White;
-            addActorButton.Location = new Point(3, 601);
-            addActorButton.Name = "addActorButton";
-            addActorButton.Size = new Size(1133, 50);
-            addActorButton.TabIndex = 19;
-            addActorButton.Text = "Add Actor";
-            addActorButton.UseVisualStyleBackColor = false;
+            topMovieDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            topMovieDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            topMovieDataView.BorderStyle = BorderStyle.None;
+            topMovieDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tableLayoutPanel5.SetColumnSpan(topMovieDataView, 3);
+            topMovieDataView.Location = new Point(0, 84);
+            topMovieDataView.Margin = new Padding(0, 8, 0, 0);
+            topMovieDataView.Name = "topMovieDataView";
+            topMovieDataView.RowHeadersWidth = 51;
+            topMovieDataView.Size = new Size(1133, 566);
+            topMovieDataView.TabIndex = 5;
             // 
             // tableLayoutPanel7
             // 
-            tableLayoutPanel7.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel7.AutoSize = true;
-            tableLayoutPanel7.ColumnCount = 1;
+            tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel7.ColumnCount = 3;
+            tableLayoutPanel5.SetColumnSpan(tableLayoutPanel7, 3);
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle());
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 250F));
             tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel7.Controls.Add(nameLabel, 0, 0);
-            tableLayoutPanel7.Controls.Add(nameInput, 0, 2);
+            tableLayoutPanel7.Controls.Add(monthLabel, 0, 0);
+            tableLayoutPanel7.Controls.Add(monthComboBox, 1, 0);
             tableLayoutPanel7.Location = new Point(0, 0);
-            tableLayoutPanel7.Margin = new Padding(0, 0, 0, 16);
+            tableLayoutPanel7.Margin = new Padding(0);
             tableLayoutPanel7.Name = "tableLayoutPanel7";
-            tableLayoutPanel7.RowCount = 3;
-            tableLayoutPanel7.RowStyles.Add(new RowStyle());
-            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel7.RowStyles.Add(new RowStyle());
-            tableLayoutPanel7.Size = new Size(1139, 90);
-            tableLayoutPanel7.TabIndex = 20;
+            tableLayoutPanel7.RowCount = 1;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.Size = new Size(1133, 60);
+            tableLayoutPanel7.TabIndex = 1;
             // 
-            // nameLabel
+            // monthLabel
             // 
-            nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Segoe UI", 13.915966F);
-            nameLabel.ForeColor = Color.White;
-            nameLabel.Location = new Point(3, 0);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(97, 31);
-            nameLabel.TabIndex = 1;
-            nameLabel.Text = "Address";
+            monthLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            monthLabel.AutoSize = true;
+            monthLabel.Font = new Font("Segoe UI", 13.915966F);
+            monthLabel.ForeColor = Color.White;
+            monthLabel.Location = new Point(3, 14);
+            monthLabel.Margin = new Padding(3, 0, 16, 0);
+            monthLabel.Name = "monthLabel";
+            monthLabel.Size = new Size(154, 31);
+            monthLabel.TabIndex = 22;
+            monthLabel.Text = "Select Month:";
+            monthLabel.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // nameInput
+            // monthComboBox
             // 
-            nameInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            nameInput.BackColor = Color.FromArgb(25, 26, 63);
-            nameInput.BorderColor = Color.FromArgb(25, 26, 63);
-            nameInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            nameInput.BorderRadius = 26;
-            nameInput.BorderSize = 2;
-            nameInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nameInput.ForeColor = Color.White;
-            nameInput.Location = new Point(0, 39);
-            nameInput.Margin = new Padding(0);
-            nameInput.Multiline = false;
-            nameInput.Name = "nameInput";
-            nameInput.Padding = new Padding(20, 15, 20, 15);
-            nameInput.PasswordChar = false;
-            nameInput.PlaceholderColor = Color.DarkGray;
-            nameInput.PlaceholderText = "1234 56 Street";
-            nameInput.Size = new Size(1139, 51);
-            nameInput.TabIndex = 20;
-            nameInput.UnderlinedStyle = false;
+            monthComboBox.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            monthComboBox.FormattingEnabled = true;
+            monthComboBox.Location = new Point(176, 16);
+            monthComboBox.Name = "monthComboBox";
+            monthComboBox.Size = new Size(244, 28);
+            monthComboBox.TabIndex = 23;
             // 
-            // tableLayoutPanel5
-            // 
-            tableLayoutPanel5.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel5.AutoSize = true;
-            tableLayoutPanel5.ColumnCount = 1;
-            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel5.Controls.Add(genderLabel, 0, 0);
-            tableLayoutPanel5.Controls.Add(genderInput, 0, 2);
-            tableLayoutPanel5.Location = new Point(0, 106);
-            tableLayoutPanel5.Margin = new Padding(0, 0, 0, 16);
-            tableLayoutPanel5.Name = "tableLayoutPanel5";
-            tableLayoutPanel5.RowCount = 3;
-            tableLayoutPanel5.RowStyles.Add(new RowStyle());
-            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel5.RowStyles.Add(new RowStyle());
-            tableLayoutPanel5.Size = new Size(1139, 90);
-            tableLayoutPanel5.TabIndex = 21;
-            // 
-            // genderLabel
-            // 
-            genderLabel.AutoSize = true;
-            genderLabel.Font = new Font("Segoe UI", 13.915966F);
-            genderLabel.ForeColor = Color.White;
-            genderLabel.Location = new Point(3, 0);
-            genderLabel.Name = "genderLabel";
-            genderLabel.Size = new Size(97, 31);
-            genderLabel.TabIndex = 1;
-            genderLabel.Text = "Address";
-            // 
-            // genderInput
-            // 
-            genderInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            genderInput.BackColor = Color.FromArgb(25, 26, 63);
-            genderInput.BorderColor = Color.FromArgb(25, 26, 63);
-            genderInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            genderInput.BorderRadius = 26;
-            genderInput.BorderSize = 2;
-            genderInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            genderInput.ForeColor = Color.White;
-            genderInput.Location = new Point(0, 39);
-            genderInput.Margin = new Padding(0);
-            genderInput.Multiline = false;
-            genderInput.Name = "genderInput";
-            genderInput.Padding = new Padding(20, 15, 20, 15);
-            genderInput.PasswordChar = false;
-            genderInput.PlaceholderColor = Color.DarkGray;
-            genderInput.PlaceholderText = "1234 56 Street";
-            genderInput.Size = new Size(1139, 51);
-            genderInput.TabIndex = 20;
-            genderInput.UnderlinedStyle = false;
-            // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel6.AutoSize = true;
-            tableLayoutPanel6.ColumnCount = 1;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel6.Controls.Add(dobLabel, 0, 0);
-            tableLayoutPanel6.Controls.Add(dobInput, 0, 2);
-            tableLayoutPanel6.Location = new Point(0, 212);
-            tableLayoutPanel6.Margin = new Padding(0, 0, 0, 16);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 3;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Absolute, 8F));
-            tableLayoutPanel6.RowStyles.Add(new RowStyle());
-            tableLayoutPanel6.Size = new Size(1139, 90);
-            tableLayoutPanel6.TabIndex = 22;
-            // 
-            // dobLabel
-            // 
-            dobLabel.AutoSize = true;
-            dobLabel.Font = new Font("Segoe UI", 13.915966F);
-            dobLabel.ForeColor = Color.White;
-            dobLabel.Location = new Point(3, 0);
-            dobLabel.Name = "dobLabel";
-            dobLabel.Size = new Size(97, 31);
-            dobLabel.TabIndex = 1;
-            dobLabel.Text = "Address";
-            // 
-            // dobInput
-            // 
-            dobInput.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            dobInput.BackColor = Color.FromArgb(25, 26, 63);
-            dobInput.BorderColor = Color.FromArgb(25, 26, 63);
-            dobInput.BorderFocusColor = Color.FromArgb(84, 80, 164);
-            dobInput.BorderRadius = 26;
-            dobInput.BorderSize = 2;
-            dobInput.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dobInput.ForeColor = Color.White;
-            dobInput.Location = new Point(0, 39);
-            dobInput.Margin = new Padding(0);
-            dobInput.Multiline = false;
-            dobInput.Name = "dobInput";
-            dobInput.Padding = new Padding(20, 15, 20, 15);
-            dobInput.PasswordChar = false;
-            dobInput.PlaceholderColor = Color.DarkGray;
-            dobInput.PlaceholderText = "1234 56 Street";
-            dobInput.Size = new Size(1139, 51);
-            dobInput.TabIndex = 20;
-            dobInput.UnderlinedStyle = false;
-            // 
-            // addActor
+            // grossingMovies
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -648,9 +525,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "addActor";
+            Name = "grossingMovies";
             Size = new Size(1301, 805);
-            Load += addActor_Load;
+            Load += grossingMovies_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -671,14 +548,10 @@
             roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
-            tableLayoutPanel4.ResumeLayout(false);
-            tableLayoutPanel4.PerformLayout();
+            tableLayoutPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)topMovieDataView).EndInit();
             tableLayoutPanel7.ResumeLayout(false);
             tableLayoutPanel7.PerformLayout();
-            tableLayoutPanel5.ResumeLayout(false);
-            tableLayoutPanel5.PerformLayout();
-            tableLayoutPanel6.ResumeLayout(false);
-            tableLayoutPanel6.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -709,20 +582,19 @@
         private Label ReportLabel;
         private Label LogoutLabel;
 
+        private DataGridView EmpDataView;
+
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
-
-        private TableLayoutPanel tableLayoutPanel4;
-        private Button addActorButton;
-        private TableLayoutPanel tableLayoutPanel6;
-        private Label dobLabel;
-        private CustomControls.RoundedTextBox.RoundedTextBox dobInput;
         private TableLayoutPanel tableLayoutPanel5;
-        private Label genderLabel;
-        private CustomControls.RoundedTextBox.RoundedTextBox genderInput;
+        private CustomControls.RoundedTextBox.RoundedTextBox actorSearch;
+        private Label biggestFanLabel;
+        private DataGridView topMovieDataView;
+        private DataGridView biggestFanDataView;
+        private Button addCustomerButton;
         private TableLayoutPanel tableLayoutPanel7;
-        private Label nameLabel;
-        private CustomControls.RoundedTextBox.RoundedTextBox nameInput;
+        private Label monthLabel;
+        private ComboBox monthComboBox;
     }
 }

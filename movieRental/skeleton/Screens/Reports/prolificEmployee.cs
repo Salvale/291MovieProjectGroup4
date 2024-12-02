@@ -15,62 +15,18 @@ using System.Drawing.Text;
 
 namespace movieRental
 {
-    public partial class actorScreen : UserControl
+    public partial class prolificEmployee : UserControl
     {
         private string connectionString = ConfigurationManager.ConnectionStrings["connectionString"].ConnectionString;
 
-        // Data
-        public List<Movie> Movies; // Actor
-
-        public actorScreen()
+        public prolificEmployee()
         {
             InitializeComponent();
-
-            Movies = RetrieveMovies();
-            actorDataView.DataSource = Movies;
         }
 
-        private void actorScreen_Load(object sender, EventArgs e)
+        private void prolificEmployee_Load(object sender, EventArgs e)
         {
 
-        }
-
-        // Data Source
-        private List<Movie> RetrieveMovies()
-        {
-            var movies = new List<Movie>();
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                conn.Open();
-                String nameQuery = "SELECT * FROM Movie";
-                using (SqlCommand cmd = new SqlCommand(nameQuery, conn))
-                {
-
-                    try
-                    {
-                        SqlDataReader myReader = cmd.ExecuteReader();
-
-                        while (myReader.Read())
-                        {
-                            movies.Add(new Movie()
-                            {
-                                Title = myReader.GetString(1),
-                                Genre = myReader.GetString(2),
-                                Fee = myReader.GetDecimal(3),
-                                TotalCopies = myReader.GetInt32(4)
-                            });
-
-                        }
-
-                        myReader.Close();
-                    }
-                    catch (Exception exception)
-                    {
-                        MessageBox.Show(exception.Message);
-                    }
-                }
-            }
-            return movies;
         }
 
         // Switch Screen

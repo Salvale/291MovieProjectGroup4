@@ -1,6 +1,6 @@
 ﻿namespace movieRental
 {
-    partial class customerScreen
+    partial class recommendedMovie
     {
         /// <summary> 
         /// Required designer variable.
@@ -51,11 +51,12 @@
             EmpTabName = new Label();
             SectionIcon = new PictureBox();
             roundedPanel2 = new CustomControls.RoundedPanel.RoundedPanel();
-            tableLayoutPanel4 = new TableLayoutPanel();
-            EmpDataView = new DataGridView();
-            tableLayoutPanel6 = new TableLayoutPanel();
-            addCustomerButton = new Button();
+            tableLayoutPanel5 = new TableLayoutPanel();
             customerSearch = new CustomControls.RoundedTextBox.RoundedTextBox();
+            tableLayoutPanel7 = new TableLayoutPanel();
+            recomendedMovieLabel = new Label();
+            customerDataView = new DataGridView();
+            recommendedMovieDataView = new DataGridView();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             roundedPanel7.SuspendLayout();
@@ -73,9 +74,10 @@
             roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).BeginInit();
             roundedPanel2.SuspendLayout();
-            tableLayoutPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).BeginInit();
-            tableLayoutPanel6.SuspendLayout();
+            tableLayoutPanel5.SuspendLayout();
+            tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)customerDataView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)recommendedMovieDataView).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -185,7 +187,7 @@
             // ReportsContainer
             // 
             ReportsContainer.Anchor = AnchorStyles.None;
-            ReportsContainer.BackColor = Color.Transparent;
+            ReportsContainer.BackColor = Color.FromArgb(84, 80, 164);
             ReportsContainer.BorderColor = Color.Transparent;
             ReportsContainer.BorderRadius = 10;
             ReportsContainer.BorderSize = 0;
@@ -229,7 +231,7 @@
             // CustomersContainer
             // 
             CustomersContainer.Anchor = AnchorStyles.None;
-            CustomersContainer.BackColor = Color.FromArgb(84, 80, 164);
+            CustomersContainer.BackColor = Color.Transparent;
             CustomersContainer.BackgroundImageLayout = ImageLayout.None;
             CustomersContainer.BorderColor = Color.Transparent;
             CustomersContainer.BorderRadius = 10;
@@ -408,13 +410,13 @@
             EmpTabName.Name = "EmpTabName";
             EmpTabName.Size = new Size(1065, 74);
             EmpTabName.TabIndex = 0;
-            EmpTabName.Text = "Customer";
+            EmpTabName.Text = "Recommened Movie for Customer";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // SectionIcon
             // 
             SectionIcon.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            SectionIcon.Image = Properties.Resources.customers;
+            SectionIcon.Image = Properties.Resources.report;
             SectionIcon.Location = new Point(3, 3);
             SectionIcon.Name = "SectionIcon";
             SectionIcon.Size = new Size(94, 74);
@@ -433,7 +435,7 @@
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             roundedPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
-            roundedPanel2.Controls.Add(tableLayoutPanel4, 1, 1);
+            roundedPanel2.Controls.Add(tableLayoutPanel5, 1, 1);
             roundedPanel2.Location = new Point(0, 88);
             roundedPanel2.Margin = new Padding(0);
             roundedPanel2.Name = "roundedPanel2";
@@ -444,65 +446,25 @@
             roundedPanel2.Size = new Size(1171, 688);
             roundedPanel2.TabIndex = 8;
             // 
-            // tableLayoutPanel4
+            // tableLayoutPanel5
             // 
-            tableLayoutPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel4.ColumnCount = 1;
-            tableLayoutPanel4.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Controls.Add(EmpDataView, 0, 1);
-            tableLayoutPanel4.Controls.Add(tableLayoutPanel6, 0, 0);
-            tableLayoutPanel4.Location = new Point(19, 19);
-            tableLayoutPanel4.Name = "tableLayoutPanel4";
-            tableLayoutPanel4.RowCount = 2;
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
-            tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel4.Size = new Size(1133, 650);
-            tableLayoutPanel4.TabIndex = 0;
-            // 
-            // EmpDataView
-            // 
-            EmpDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            EmpDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
-            EmpDataView.BorderStyle = BorderStyle.None;
-            EmpDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            EmpDataView.Location = new Point(0, 68);
-            EmpDataView.Margin = new Padding(0, 8, 0, 0);
-            EmpDataView.Name = "EmpDataView";
-            EmpDataView.RowHeadersWidth = 51;
-            EmpDataView.Size = new Size(1133, 582);
-            EmpDataView.TabIndex = 4;
-            // 
-            // tableLayoutPanel6
-            // 
-            tableLayoutPanel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel6.ColumnCount = 3;
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 463F));
-            tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 403F));
-            tableLayoutPanel6.Controls.Add(addCustomerButton, 0, 0);
-            tableLayoutPanel6.Controls.Add(customerSearch, 2, 0);
-            tableLayoutPanel6.Location = new Point(0, 0);
-            tableLayoutPanel6.Margin = new Padding(0);
-            tableLayoutPanel6.Name = "tableLayoutPanel6";
-            tableLayoutPanel6.RowCount = 1;
-            tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel6.Size = new Size(1133, 60);
-            tableLayoutPanel6.TabIndex = 5;
-            // 
-            // addCustomerButton
-            // 
-            addCustomerButton.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            addCustomerButton.BackColor = Color.FromArgb(84, 80, 164);
-            addCustomerButton.FlatAppearance.BorderSize = 0;
-            addCustomerButton.FlatStyle = FlatStyle.Flat;
-            addCustomerButton.ForeColor = Color.White;
-            addCustomerButton.Location = new Point(3, 5);
-            addCustomerButton.Name = "addCustomerButton";
-            addCustomerButton.Size = new Size(261, 50);
-            addCustomerButton.TabIndex = 20;
-            addCustomerButton.Text = "Add Customer";
-            addCustomerButton.UseVisualStyleBackColor = false;
-            addCustomerButton.Click += addCustomer_Click;
+            tableLayoutPanel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel5.ColumnCount = 3;
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel5.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel5.Controls.Add(customerSearch, 0, 0);
+            tableLayoutPanel5.Controls.Add(tableLayoutPanel7, 2, 0);
+            tableLayoutPanel5.Controls.Add(customerDataView, 0, 2);
+            tableLayoutPanel5.Controls.Add(recommendedMovieDataView, 2, 2);
+            tableLayoutPanel5.Location = new Point(19, 19);
+            tableLayoutPanel5.Name = "tableLayoutPanel5";
+            tableLayoutPanel5.RowCount = 3;
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 60F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 16F));
+            tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel5.Size = new Size(1133, 650);
+            tableLayoutPanel5.TabIndex = 7;
             // 
             // customerSearch
             // 
@@ -514,7 +476,7 @@
             customerSearch.BorderSize = 2;
             customerSearch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point, 0);
             customerSearch.ForeColor = Color.White;
-            customerSearch.Location = new Point(730, 4);
+            customerSearch.Location = new Point(0, 4);
             customerSearch.Margin = new Padding(0);
             customerSearch.Multiline = false;
             customerSearch.Name = "customerSearch";
@@ -522,11 +484,65 @@
             customerSearch.PasswordChar = false;
             customerSearch.PlaceholderColor = Color.DarkGray;
             customerSearch.PlaceholderText = "Search for a customer";
-            customerSearch.Size = new Size(403, 51);
+            customerSearch.Size = new Size(558, 51);
             customerSearch.TabIndex = 0;
             customerSearch.UnderlinedStyle = false;
             // 
-            // customerScreen
+            // tableLayoutPanel7
+            // 
+            tableLayoutPanel7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel7.ColumnCount = 2;
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 69.32953F));
+            tableLayoutPanel7.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30.6704712F));
+            tableLayoutPanel7.Controls.Add(recomendedMovieLabel, 0, 0);
+            tableLayoutPanel7.Location = new Point(574, 0);
+            tableLayoutPanel7.Margin = new Padding(0);
+            tableLayoutPanel7.Name = "tableLayoutPanel7";
+            tableLayoutPanel7.RowCount = 1;
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel7.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel7.Size = new Size(559, 60);
+            tableLayoutPanel7.TabIndex = 1;
+            // 
+            // recomendedMovieLabel
+            // 
+            recomendedMovieLabel.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            recomendedMovieLabel.AutoSize = true;
+            recomendedMovieLabel.Font = new Font("Segoe UI", 13.915966F);
+            recomendedMovieLabel.ForeColor = Color.White;
+            recomendedMovieLabel.Location = new Point(3, 14);
+            recomendedMovieLabel.Name = "recomendedMovieLabel";
+            recomendedMovieLabel.Size = new Size(381, 31);
+            recomendedMovieLabel.TabIndex = 22;
+            recomendedMovieLabel.Text = "Recommended for X:";
+            // 
+            // customerDataView
+            // 
+            customerDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            customerDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            customerDataView.BorderStyle = BorderStyle.None;
+            customerDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            customerDataView.Location = new Point(0, 84);
+            customerDataView.Margin = new Padding(0, 8, 0, 0);
+            customerDataView.Name = "customerDataView";
+            customerDataView.RowHeadersWidth = 51;
+            customerDataView.Size = new Size(558, 566);
+            customerDataView.TabIndex = 5;
+            // 
+            // recommendedMovieDataView
+            // 
+            recommendedMovieDataView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            recommendedMovieDataView.BackgroundColor = Color.FromArgb(40, 44, 91);
+            recommendedMovieDataView.BorderStyle = BorderStyle.None;
+            recommendedMovieDataView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            recommendedMovieDataView.Location = new Point(574, 84);
+            recommendedMovieDataView.Margin = new Padding(0, 8, 0, 0);
+            recommendedMovieDataView.Name = "recommendedMovieDataView";
+            recommendedMovieDataView.RowHeadersWidth = 51;
+            recommendedMovieDataView.Size = new Size(559, 566);
+            recommendedMovieDataView.TabIndex = 6;
+            // 
+            // recommendedMovie
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -534,9 +550,9 @@
             BackColor = Color.FromArgb(25, 26, 63);
             Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "customerScreen";
+            Name = "recommendedMovie";
             Size = new Size(1301, 805);
-            Load += customerScreen_Load;
+            Load += recommendedMovie_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -557,9 +573,11 @@
             roundedPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)SectionIcon).EndInit();
             roundedPanel2.ResumeLayout(false);
-            tableLayoutPanel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)EmpDataView).EndInit();
-            tableLayoutPanel6.ResumeLayout(false);
+            tableLayoutPanel5.ResumeLayout(false);
+            tableLayoutPanel7.ResumeLayout(false);
+            tableLayoutPanel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)customerDataView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)recommendedMovieDataView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -595,11 +613,12 @@
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel1;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel2;
         private CustomControls.RoundedPanel.RoundedPanel roundedPanel7;
-
-        private TableLayoutPanel tableLayoutPanel4;
-        private TableLayoutPanel tableLayoutPanel6;
-
+        private TableLayoutPanel tableLayoutPanel5;
         private CustomControls.RoundedTextBox.RoundedTextBox customerSearch;
+        private TableLayoutPanel tableLayoutPanel7;
+        private Label recomendedMovieLabel;
+        private DataGridView customerDataView;
+        private DataGridView recommendedMovieDataView;
         private Button addCustomerButton;
     }
 }

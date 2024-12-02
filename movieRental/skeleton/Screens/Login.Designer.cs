@@ -99,7 +99,6 @@
             titleLabel.TabIndex = 5;
             titleLabel.Text = "Movie Rental";
             titleLabel.TextAlign = ContentAlignment.MiddleLeft;
-            titleLabel.Click += titleLabel_Click;
             // 
             // empLabel
             // 
@@ -113,7 +112,6 @@
             empLabel.Size = new Size(405, 61);
             empLabel.TabIndex = 6;
             empLabel.Text = "Employee Login";
-            empLabel.Click += empLabel_Click;
             // 
             // helpLabel
             // 
@@ -125,7 +123,6 @@
             helpLabel.Size = new Size(49, 25);
             helpLabel.TabIndex = 7;
             helpLabel.Text = "help";
-            helpLabel.Click += helpLabel_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -148,7 +145,6 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Size = new Size(1305, 804);
             tableLayoutPanel1.TabIndex = 12;
-            tableLayoutPanel1.Paint += tableLayoutPanel1_Paint;
             // 
             // tableLayoutPanel2
             // 
@@ -182,7 +178,6 @@
             tableLayoutPanel6.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.Size = new Size(581, 195);
             tableLayoutPanel6.TabIndex = 16;
-            tableLayoutPanel6.Paint += tableLayoutPanel6_Paint;
             // 
             // pictureBox1
             // 
@@ -194,7 +189,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // tableLayoutPanel5
             // 
@@ -215,7 +209,6 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Absolute, 75F));
             tableLayoutPanel5.Size = new Size(516, 436);
             tableLayoutPanel5.TabIndex = 15;
-            tableLayoutPanel5.Paint += tableLayoutPanel5_Paint;
             // 
             // tableLayoutPanel3
             // 
@@ -232,7 +225,6 @@
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tableLayoutPanel3.Size = new Size(510, 137);
             tableLayoutPanel3.TabIndex = 13;
-            tableLayoutPanel3.Paint += tableLayoutPanel3_Paint_1;
             // 
             // tableLayoutPanel7
             // 
@@ -281,7 +273,6 @@
             userName.Size = new Size(510, 51);
             userName.TabIndex = 18;
             userName.UnderlinedStyle = false;
-            userName._TextChanged += userName__TextChanged;
             // 
             // tableLayoutPanel4
             // 
@@ -314,7 +305,6 @@
             tableLayoutPanel8.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel8.Size = new Size(504, 62);
             tableLayoutPanel8.TabIndex = 17;
-            tableLayoutPanel8.Paint += tableLayoutPanel8_Paint;
             // 
             // pictureBox3
             // 

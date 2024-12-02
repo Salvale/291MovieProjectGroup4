@@ -457,7 +457,6 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel4.Size = new Size(1133, 650);
             tableLayoutPanel4.TabIndex = 0;
-            tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
             // EmpDataView
             // 

@@ -365,6 +365,7 @@
             MovieButton.SizeMode = PictureBoxSizeMode.CenterImage;
             MovieButton.TabIndex = 0;
             MovieButton.TabStop = false;
+            MovieButton.Click += MoviesButton_Click;
             // 
             // MovieLabel
             // 
@@ -428,7 +429,6 @@
             EmpTabName.TabIndex = 0;
             EmpTabName.Text = "Add Movie";
             EmpTabName.TextAlign = ContentAlignment.MiddleLeft;
-            EmpTabName.Click += EmpTabName_Click;
             // 
             // SectionIcon
             // 
@@ -482,7 +482,6 @@
             tableLayoutPanel4.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel4.Size = new Size(1139, 656);
             tableLayoutPanel4.TabIndex = 0;
-            tableLayoutPanel4.Paint += tableLayoutPanel4_Paint;
             // 
             // addMovieButton
             // 

@@ -465,7 +465,6 @@
             tableLayoutPanel5.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tableLayoutPanel5.Size = new Size(1133, 650);
             tableLayoutPanel5.TabIndex = 7;
-            tableLayoutPanel5.Paint += tableLayoutPanel5_Paint;
             // 
             // customerSearch
             // 

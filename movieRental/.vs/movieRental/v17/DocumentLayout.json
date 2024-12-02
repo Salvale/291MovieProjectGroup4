@@ -1,34 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\",
+  "WorkspaceRootPath": "F:\\Development\\Coding\\.School\\CMPT 291\\movieRental\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\reports\\biggestfan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\reports\\biggestfan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\editcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\reports\\grossingmovies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\reports\\grossingmovies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\reports\\recommendedmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\reports\\recommendedmovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\customerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\reports\\prolificemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\reports\\prolificemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|c:\\users\\moses\\desktop\\291movieprojectgroup4\\movierental\\skeleton\\screens\\addcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\addcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|C:\\Users\\moses\\Desktop\\291MovieProjectGroup4\\movieRental\\skeleton\\screens\\addcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\addcustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|f:\\development\\coding\\.school\\cmpt 291\\movierental\\skeleton\\screens\\reports\\highestratedgenremovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2185E7DD-6F1C-4838-A752-9FD263CEA964}|skeleton\\movieRental.csproj|solutionrelative:skeleton\\screens\\reports\\highestratedgenremovie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,8 +29,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 290,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 265,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
